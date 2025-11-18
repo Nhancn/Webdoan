@@ -1,1 +1,289 @@
+body {
+	margin: 0;
+	font-family: Roboto;
+}
+/* bar */
 
+.bar {
+	background-color: #01203D;
+	color: #5D7B92;
+	overflow: hidden;
+	padding-bottom: 10px;
+	
+}
+
+.topbar {
+	display: flex;
+	justify-content: flex-end;
+	
+}
+
+.topbar p {
+	padding-right: 100px;
+}
+
+.bottombar {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.bottombar img {
+	width: 150px;
+	height: auto;
+}
+
+.nav {
+	margin-top: 9px;
+	display: flex;
+	align-items: center;
+}
+
+.nav a {
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	margin: auto 30px;
+}
+
+.bottom .menu .view, .signup {
+	
+}
+
+.bottombar .view {
+	color: white;
+	text-decoration: none;
+	border: 0.5px solid white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin: 0 5px;
+	display: inline-block;
+	transition-duration: $defaultDuration;
+	transition-property: transform;
+
+	@include hideTapHighlightColor();
+	@include hardwareAccel();
+	@include improveAntiAlias();
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+}
+
+.bottombar .signup {
+	color: white;
+	text-decoration: none;
+	border: 0.5px solid #85BB12;
+	padding: 10px 20px;
+	border-radius: 5px;
+	background-color: #85BB12;
+	margin: 0 5px;
+	display: inline-block;
+	transition-duration: $defaultDuration;
+	transition-property: transform;
+
+	@include hideTapHighlightColor();
+	@include hardwareAccel();
+	@include improveAntiAlias();
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  will-change: transform;
+}
+
+.sticky--top {
+  top: 0; /* Dính vào đỉnh */
+  /* Thêm z-index để đảm bảo nó luôn đè lên nội dung khác */
+  z-index: 1000; 
+}
+
+.js-header::after {
+  bottom: 0;
+  box-shadow: 0 0.0625em 0.5em rgba(0, 0, 0, .3);
+  content: '';
+  left: 0;
+  opacity: 0; 
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: -1; 
+}
+
+.js-header.is-active::after {
+  opacity: 1; 
+}
+
+/* content */
+/* content img */
+.n1 {
+	display: flex;
+	width: 100%;
+	flex-direction: row-reverse;
+	font-family: Roboto;
+	
+}
+
+.n1 img {
+	width: 65%;
+	height: auto;
+}
+
+.n1 .title {
+	background-color: #0A4786;
+	color: white;
+	padding: 25px;
+	width: 35%;
+}
+
+h2 {
+	font-size: 48px;
+	margin-bottom:  0;
+	
+}
+
+/* content input */
+form input {
+    width: 100%;
+    padding: 10px 8px;
+    border: 1px solid #ccc;
+	border-radius: 4px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+	margin-bottom: 16px;
+}
+
+.form-row {
+	display: flex;
+	flex: 1;
+	gap: 15px;
+}
+
+/* content button box */	
+.button {
+	display: flex;
+	color: white;
+	min-width: 100%;
+	gap: 15px;
+	height: 80px;
+}
+
+.button .but-pro {
+	background-color: #DF7424;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border-radius: 4px;
+	border: 0.5px solid #DF7424;
+	justify-content: center;
+	
+}
+
+.button .but-free {
+	background-color: #73A41D;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border-radius: 4px;
+	border: 0.5px solid #73A41D;
+	justify-content: center;
+	
+}
+
+.button .p1 {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.button .p2 {
+	font-size: 10px;
+	
+}
+	
+.title p:last-child {
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+/* investor */
+.investor {
+	display: flex;
+	max-width: 100vw;
+	height: 78px;
+	margin: 20px;
+	padding-bottom: 10px;
+	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+	
+}
+
+.investor p {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 35%;
+	color: gray;
+	font-weight: bold;
+}
+
+.logo-investor {
+	display: flex;
+	width: 65%;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.logo-investor img {
+	width: 15%;
+}
+
+.logo-investor img:nth-of-type(5) {
+	margin-left: 30px;
+
+}
+
+.end {
+	text-align: center;
+	font-size: 25px;
+}
+
+.end span {
+	font-weight: bold;
+}
+
+/* support */
+.support {
+	display: flex;
+	max-width: 100vw;
+	justify-content: center;
+	gap: 70px;
+	margin-top: 30px;
+	
+}
+
+.support .box1 {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.support img {
+	width: 150px;
+	height: 150px;
+	
+}
+
+.support p {
+	color: #0A4786;
+	
+}
